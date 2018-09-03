@@ -6,6 +6,26 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+// way 3
+function reverse(str){
+    let reverse="";
+    return str.split('').reduce((reverse,value)=> reverse = value+reverse);
+}
+
+//way 2
+// function reverse(str){
+//     let reversedWord = "";
+//     for(let char of str){
+//         reversedWord=char + reversedWord;
+//     }
+//     return reversedWord;
+// }
+
+//Way 1
+// function reverse(str) {
+//     return str.split("").reverse().join("")
+// }
+
+console.log(reverse("Sathish kumar"));
 
 module.exports = reverse;
